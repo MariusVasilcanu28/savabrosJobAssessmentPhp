@@ -1,0 +1,525 @@
+/* css properties */
+/*
+  brand color: #29a5da
+
+  - FONT SIZE SYSTEM (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+  - SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+/* ROOT */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* Fonts and stuff */
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #eee;
+  color: #333;
+}
+
+/* REUSABLE */
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
+  padding: 3.2rem;
+}
+
+.boldStyle {
+  font-weight: bold;
+}
+
+.underlineStyle {
+  text-decoration: underline;
+}
+
+.italicStyle {
+  font-style: italic;
+}
+
+.redStyle {
+  color: red;
+}
+
+.reusable-grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 4rem;
+}
+
+.reusable-grid--2-col {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 100rem;
+}
+
+.reusable-grid--center-vertical {
+  align-items: center;
+}
+
+.margin-bottom-zero {
+  margin-bottom: 0;
+}
+
+/* ---------------------------- */
+/* HEADER (Logo, Nav, Nav Btns) */
+/* ---------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #15436d;
+
+  height: 10.5rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  height: 8.6rem;
+}
+
+/* Navigation */
+.mainNavList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4rem;
+}
+
+.mainNavLink:link,
+.mainNavLink:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.6rem;
+  transition: all 300ms;
+  color: #fff;
+}
+
+.mainNavLink:hover,
+.mainNavLink:active {
+  color: #d0ebff;
+}
+
+.mainNavLink.joinUsCta:link,
+.mainNavLink.joinUsCta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #29a5da;
+  color: #eee;
+}
+
+.mainNavLink.joinUsCta:hover,
+.mainNavLink.joinUsCta:active {
+  background-color: #34b4e4;
+}
+
+/* Sticky Header */
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  background-color: rgba(21, 66, 109, 0.97);
+
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .heroSection {
+  margin-top: 9.6rem;
+}
+
+.sticky .logo {
+  height: 7.4rem;
+}
+
+/* TODO take care of it in queries and js for mobile vers. */
+/* Mobile Menu (Button) */
+.btnMobileNav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.iconMobileNav {
+  height: 5.2rem;
+  width: 5.2rem;
+  color: #ddd;
+}
+
+.iconMobileNav[name="close-outline"] {
+  /* color: #000; */
+  display: none;
+}
+
+/* ------------ */
+/* HERO SECTION */
+/* ------------ */
+
+/* Primary */
+.heroSection {
+  background-color: #15436d;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9.6rem;
+
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.primaryContainer {
+}
+
+.primaryHeading,
+.missionHeading {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.primaryHeading {
+  font-size: 5.6rem;
+  margin-bottom: 3.6rem;
+  color: #eee;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mission */
+.missionHeading {
+  font-size: 4.8rem;
+  margin-bottom: 3.6rem;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  color: #eee;
+  box-shadow: rgba(112, 159, 184, 0.885) 0px 0px 5px 2px;
+}
+
+.heroDescription {
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #fffafa;
+}
+
+/* ------------------------ */
+/* RESPONSABILITIES SECTION */
+/* ------------------------ */
+.responsabilitiesSection {
+  padding-top: 1.2rem;
+}
+
+/* Responsabilities Heading */
+.responsabilitiesHeading {
+  text-decoration: underline;
+  font-size: 4.2rem;
+  margin-bottom: 2.4rem;
+}
+
+/* Responsabilities List */
+.responsabilitiesList {
+  margin-left: 8.6rem;
+  font-size: 1.8rem;
+  list-style: square;
+}
+
+.responsabilitiesList li {
+  padding-bottom: 1.6rem;
+  line-height: 1.2;
+}
+
+/* ---------------- */
+/* REQUIRED SECTION */
+/* ---------------- */
+
+.requiredSection {
+  padding-top: 1.2rem;
+}
+
+/* Required Heading */
+.requiredHeading {
+  text-decoration: underline;
+  font-size: 4.2rem;
+  margin-bottom: 2.4rem;
+}
+
+/* Required List */
+.blueContainer {
+  background-color: #ccecff;
+  border: 10px solid #0070c0;
+  max-width: 100%;
+  /* margin-left: 2.4rem; */
+}
+
+.requiredList {
+  padding: 1.5rem 3rem;
+  margin-left: 0.6rem;
+  font-size: 1.8rem;
+  list-style: none;
+  text-indent: 1rem each-line hanging;
+}
+
+.requiredList li {
+  padding-bottom: 1.6rem;
+  line-height: 1.2;
+}
+
+.requiredList li::before {
+  content: "\2022";
+  color: #0070c0;
+  display: inline-block;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+}
+
+/* -------------------- */
+/* COMPETENCIES SECTION */
+/* -------------------- */
+
+.competenciesSection {
+  padding-top: 1.2rem;
+}
+
+/* Competencies Heading */
+.competenciesHeading {
+  text-decoration: underline;
+  font-size: 4.2rem;
+  margin-bottom: 2.4rem;
+}
+
+/* Competencies List */
+.yellowContainer {
+  background-color: yellow;
+  border: 10px solid #0070c0;
+  max-width: 100%;
+  /* margin-left: 2.4rem; */
+}
+
+.competenciesList {
+  padding: 1.5rem 3rem;
+  margin-left: 2.4rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-indent: 1rem each-line hanging;
+}
+
+.competenciesList li {
+  padding-bottom: 1.6rem;
+  line-height: 1.2;
+}
+
+/* ------------- */
+/* BONUS SECTION */
+/* ------------- */
+
+.bonusSection {
+  padding-top: 1.2rem;
+}
+
+/* Bonus Heading */
+.bonusHeading {
+  font-size: 4.2rem;
+  margin-bottom: 2.4rem;
+}
+
+/* Bonus List */
+
+.bonusList {
+  margin-left: 8.6rem;
+  font-size: 1.8rem;
+  list-style: square;
+}
+
+.bonusList li {
+  padding-bottom: 1.6rem;
+  line-height: 1.2;
+}
+
+/* ------------ */
+/* JOIN SECTION */
+/* ------------ */
+.gotJoinSection {
+  padding-top: 1.2rem;
+}
+
+/* Got button/link */
+.gotContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 4.8rem;
+}
+
+.gotButton,
+.gotButton:link,
+.gotButton:visited {
+  display: inline-block;
+  border: none;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  font-weight: 500;
+  font-size: 6rem;
+  padding: 4rem 8rem;
+  font-weight: bold;
+  color: #000;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, #f6c100, #bb9b27);
+  transition: all 300ms;
+}
+
+.gotButton:hover,
+.gotButton:active {
+  color: #174170;
+}
+
+/* Join button  */
+.joinContainer {
+  display: none;
+  margin-bottom: 4.8rem;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.joinButton {
+  align-items: center;
+  appearance: button;
+  background-color: #0276ff;
+  border-radius: 0.5rem;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue", sans-serif;
+  line-height: 1.15;
+  margin: 0;
+  font-size: 6rem;
+  padding: 4rem 6rem;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
+    opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.joinButton:active {
+  background-color: #006ae8;
+}
+
+.joinButton:hover {
+  background-color: #1c84ff;
+}
+
+/* ---------------- */
+/* ABOUT US SECTION */
+/* ---------------- */
+
+/* About Us Heading */
+.aboutUsHeading {
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 4.2rem;
+  margin-bottom: 2.4rem;
+}
+/* About Us Boxes */
+.aboutUsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border: 0.2rem solid #000;
+  padding: 4rem 2rem;
+}
+
+/* About Us Text */
+
+.aboutUs {
+  padding-top: 1.6rem;
+}
+
+.aboutUsText {
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+/* About Us Link */
+
+.aboutUsLink:link,
+.aboutUsLink:visited {
+  display: inline-block;
+  color: #0070c0;
+}
+
+.aboutUsLink:active,
+.aboutUsLink:hover {
+  color: #0070c0;
+}
+
+/* -------------- */
+/* ENDING SECTION */
+/* -------------- */
+
+/* Send CV Text */
+.sendCv {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+/* ------- */
+/* FOOOTER */
+/* -------- */
+
+.footer {
+  background-color: #b4da9a;
+}
+.flexFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+/* Footer Text */
+.footerText {
+  font-size: 2.4rem;
+}

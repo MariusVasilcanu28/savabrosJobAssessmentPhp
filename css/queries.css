@@ -1,0 +1,150 @@
+/* DESKTOP */
+
+/* 1290 / 16 = 80.62 = 81 (bellow 1296px -> 81 * 16) */
+@media (max-width: 81em) {
+  .sendCv {
+    line-height: 1.2;
+  }
+}
+
+/* 1100 / 16 =  68.75 = 69 (bellow 1104px = 69 * 16) */
+@media (max-width: 69em) {
+  /* 9px / 16px =  0.5625px -> 56.25% */
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* 930 / 16 = 58.125 = 59 (bellow 944px = 59 * 16) */
+@media (max-width: 59em) {
+  /* 8px / 16px =  0.5px -> 50% */
+  html {
+    font-size: 50%;
+  }
+
+  /* MOBILE NAV */
+  .btnMobileNav {
+    display: block;
+    z-index: 1000;
+  }
+
+  .mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    /* prefix */
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(41, 100, 152, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all 500ms ease-in;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .navOpen .mainNav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .navOpen .iconMobileNav[name="close-outline"] {
+    display: block;
+  }
+
+  .navOpen .iconMobileNav[name="menu-outline"] {
+    display: none;
+  }
+
+  .mainNavList {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .mainNavLink:link,
+  .mainNavLink:visited {
+    font-size: 3rem;
+  }
+}
+
+/* 700 / 16 = 43.75 = 44 (bellow 704px = 44 * 16)*/
+@media (max-width: 44em) {
+  /* 7px / 16px = 0.4375 -> 43.75% */
+  html {
+    font-size: 43.75%;
+  }
+}
+
+/* 550 / 16 = 34.375 = 34 (below 544px -> 34 * 16) */
+@media (max-width: 34em) {
+  /* 6px / 16px = 0.375 -> 37.5% */
+  html {
+    font-size: 37.5%;
+  }
+
+  .reusable-grid--2-col {
+    grid-template-columns: 1fr;
+  }
+
+  .gotLink:link,
+  .gotLink:visited {
+    font-size: 4rem;
+  }
+
+  .joinButton {
+    font-size: 3rem;
+  }
+
+  .responsabilitiesList {
+    margin-left: 6.4rem;
+  }
+
+  .bonusList {
+    margin-left: 6.4rem;
+  }
+}
+
+/* 450 / 16 = 28 (below 448px -> 28 * 16) */
+@media (max-width: 28em) {
+  html {
+    font-size: 32.75%;
+  }
+
+  .responsabilitiesList {
+    margin-left: 4.8rem;
+  }
+
+  .bonusList {
+    margin-left: 4.8rem;
+  }
+}
+
+/* 375 / 16 = 23.43 = 24 (bellow 384 = 24 * 16) */
+@media (max-width: 24em) {
+  .responsabilitiesHeading {
+    font-size: 4rem;
+  }
+
+  .requiredHeading {
+    font-size: 4rem;
+  }
+
+  .competenciesHeading {
+    font-size: 4rem;
+  }
+
+  .bonusHeading {
+    font-size: 4rem;
+  }
+
+  .aboutUsHeading {
+    font-size: 4rem;
+  }
+}
