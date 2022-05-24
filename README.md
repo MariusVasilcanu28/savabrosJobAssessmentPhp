@@ -13,4 +13,4 @@ IMPORTANT: Mentionez ca logo-ul 'savabros' (assets/logo.png) l-am descarcat de p
 link-uri utile:
 
 - frontend website - https://savabros-webdev-marius-vasilcanu.netlify.app/ (fara functionalitati de backend)
-- repo git - https://github.com/MariusVasilcanu28/savabrosJobAssessmentPhp
+- repo git (privat) - https://github.com/MariusVasilcanu28/savabrosJobAssessmentPhp
