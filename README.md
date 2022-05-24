@@ -9,3 +9,8 @@ IMPORTANT: Mentionez ca logo-ul 'savabros' (assets/logo.png) l-am descarcat de p
 - Incercarea cerintei cu 'alert' se poate vedea in 'alert.php' si 'expired.php (pagina catre care este redirectionat user-ul.).. trebuiesc doar decomentate liniile din 'alert.php'.
 
 😅 nu prea sunt mandru de mine atunci cand vine vorba de backend cu php, dar sunt sigur ca pot sa invat mai multe pe parcurs
+
+link-uri utile:
+
+- frontend website - https://savabros-webdev-marius-vasilcanu.netlify.app/ (fara functionalitati de backend)
+- repo git - https://github.com/MariusVasilcanu28/savabrosJobAssessmentPhp
