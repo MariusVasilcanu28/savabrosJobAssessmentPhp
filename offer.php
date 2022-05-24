@@ -1,3 +1,7 @@
+<?php
+   include 'inc/alert.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,13 +21,13 @@
     <!-- for PHP file - uncomment if offer.php -->
     <style>
       <?php 
-      include 'css/style.css';
-      include 'css/queries.css';
+        include 'css/style.css';
+        include 'css/queries.css';
       ?>
     </style>
 
     <!-- Javascript files -->
-    <script defer src="script.js"></script>
+    <script defer src='script/script.js'></script>
 
     <!-- Icon modules -->
     <script
@@ -35,7 +39,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
-     
+         
     <title>Savabros &dash; Junior Web Developer</title>
   </head>
   <body>
@@ -214,17 +218,35 @@
       </section>
 
       <!-- Join Section -->
-      <section id="join" class="gotJoinSection" onclick="gotJoinFunc()">
+      <form 
+        action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>"
+        method="POST"
+        id="join"
+        class="gotJoinForm"
+        onclick="gotJoinFunc()"
+        >
         <div class="container">
+          <!-- Got Button/Submit -->
           <div class="gotContainer" id="switchGot">
             <!-- <a id="gotLink" class="gotLink" href="">Got what it takes?</a> -->
-            <button class="gotButton">Got what it takes?</button>
+            <submit 
+              class="gotButton"
+              type="submit"
+              value="SubmitGot"
+              name="submitgot"
+              >Got what it takes?</submit>
           </div>
+          <!-- Join Button/Submit -->
           <div class="joinContainer" id="switchJoin">
-            <button class="joinButton">Join our team today</button>
-          </div>
+            <submit 
+              class="joinButton" 
+              type="submit" 
+              value="SubmitJoin"
+              name="submitjoin"
+              >Join our team today</submit>
+          </div>        
         </div>
-      </section>
+      </form>
 
       <!-- About Us Section -->
       <section id="aboutUs" class="aboutUs">
@@ -273,7 +295,7 @@
       <div class="container flexFooter margin-bottom-zero">
         <p class="footerText boldStyle">Thank you and good luck!</p>
         <a href="https://www.savabros.com/" target="_blank">
-          <img class="logoFooter" src="/assets/logo.png" alt="Savabros logo" />
+          <img class="logoFooter" src="assets/logo.png" alt="Savabros logo" />
         </a>
       </div>
     </footer>
